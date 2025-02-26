@@ -34,7 +34,8 @@ ticket_medio=ticket_medio.rename(columns={0: 'Ticket Médio'})
 # Unindo o faturamento e a quantidade para incluir ID na tabela do ticket médio
 ticket_medio = faturamento[['ID Loja']].merge(ticket_medio, left_index=True, right_index=True)
 
-print(ticket_medio)
+print(ticket_medio) 
+
 
 #Enviar um email com o relatório
 outlook = win32.Dispatch('outlook.application')
